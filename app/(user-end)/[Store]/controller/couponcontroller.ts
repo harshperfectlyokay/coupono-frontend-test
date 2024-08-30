@@ -12,7 +12,7 @@ export const getActiveCoupons = async (storeName: string,status:string,page: num
     }
     
     const jsonData = await response.json();
-    // console.log('coupon response: ', jsonData.data.offers);
+    console.log('coupon response: ', jsonData.data.offers);
     return jsonData.data.offers;
   } catch (error) {
     console.error('Error fetching coupons:', error);
@@ -31,7 +31,7 @@ export const getAllActiveCouponsUptoPage = async (storeName: string,status:strin
     }
     
     const jsonData = await response.json();
-    // console.log('jsonData: ', jsonData);
+     console.log('jsonData allAcitve uptopage: ', jsonData);
     return jsonData.data.offers;
   } catch (error) {
     console.error('Error fetching coupons:', error);
