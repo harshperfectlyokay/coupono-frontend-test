@@ -5,7 +5,7 @@ export const getActiveCoupons = async (storeName: string,status:string,page: num
     // const response = await fetch(`http://localhost:3004/coupons?page=${page}`);
     // console.log('offer params 1: ', storeName,'sttus ', status,'itermsperpage: ', itemsPerPage);
    
-    const response = await fetch(`https://coupono-frontend-test-git-h-5d7e67-harshperfectlyokays-projects.vercel.app/api/public/offers?store_website=https://${storeName}&status=${status}&page=${page}&itemsPerPage=${itemsPerPage}`);
+    const response = await fetch(`https://coupono-frontend-test.vercel.app/api/public/offers?store_website=https://${storeName}&status=${status}&page=${page}&itemsPerPage=${itemsPerPage}`);
     
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
@@ -24,7 +24,7 @@ export const getAllActiveCouponsUptoPage = async (storeName: string,status:strin
   try {
     // const response = await fetch(`http://localhost:3004/allcouponsuptopage?page=${page}`);
     // console.log('offer params: ', storeName,'sttus ', status,'itermsperpage: ', itemsPerPage,'upto: ', upto);
-    const response = await fetch(`https://coupono-frontend-test-git-h-5d7e67-harshperfectlyokays-projects.vercel.app/api/public/offers?store_website=https://${storeName}&status=${status}&page=${page}&itemsPerPage=${itemsPerPage}&upto=${upto}`);
+    const response = await fetch(`https://coupono-frontend-test.vercel.app/api/public/offers?store_website=https://${storeName}&status=${status}&page=${page}&itemsPerPage=${itemsPerPage}&upto=${upto}`);
     
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
@@ -42,7 +42,7 @@ export const getAllActiveCouponsUptoPage = async (storeName: string,status:strin
 export const getExpiredCoupons = async (storeName: string,status:string,page: number,itemsPerPage:number): Promise<Offer[]> => {
   try {
     // const response = await fetch(`http://localhost:3004/expiredcoupons?page=${page}`);
-    const response = await fetch(`https://coupono-frontend-test-git-h-5d7e67-harshperfectlyokays-projects.vercel.app/api/public/offers?store_website=https://${storeName}&status=${status}&page=${page}&itemsPerPage=${itemsPerPage}`);
+    const response = await fetch(`https://coupono-frontend-test.vercel.app/api/public/offers?store_website=https://${storeName}&status=${status}&page=${page}&itemsPerPage=${itemsPerPage}`);
 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
@@ -59,7 +59,7 @@ export const getExpiredCoupons = async (storeName: string,status:string,page: nu
 export const getAllExpiredCouponsUptoPage = async (storeName: string,status:string,page: number,itemsPerPage:number,upto : boolean = true): Promise<Offer[]> => {
   try {
     // const response = await fetch(`http://localhost:3004/allexpiredcouponsuptopage?page=${page}`);
-    const response = await fetch(`https://coupono-frontend-test-git-h-5d7e67-harshperfectlyokays-projects.vercel.app/api/public/offers?store_website=https://${storeName}&status=${status}&page=${page}&itemsPerPage=${itemsPerPage}&upto=${upto}`);
+    const response = await fetch(`https://coupono-frontend-test.vercel.app/api/public/offers?store_website=https://${storeName}&status=${status}&page=${page}&itemsPerPage=${itemsPerPage}&upto=${upto}`);
 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
