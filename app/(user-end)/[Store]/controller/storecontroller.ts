@@ -3,7 +3,7 @@ import { StoreType } from '../../types/store';
 export const getStore = async (storeName : string): Promise<StoreType | null> => {
   try {
     // const response = await fetch(`http://localhost:3004/store?storeName=${storeName}`);
-    const response = await fetch(`http://localhost:3000/api/public/stores?store_website=https://${storeName}`);
+    const response = await fetch(`https://coupono-frontend-test-git-h-5d7e67-harshperfectlyokays-projects.vercel.app/api/public/stores?store_website=https://${storeName}`);
     // const response = await fetch(`http://localhost:3000/api/public/stores?store_website=https://007Store.com`);
     
     if (!response.ok) {
