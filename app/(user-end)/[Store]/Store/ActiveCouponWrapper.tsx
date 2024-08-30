@@ -25,7 +25,8 @@ const ActiveCouponWrapper: React.FC<ActiveCouponWrapperProps> = ({store_slug,
   const [allcoupons, setCoupons] = useState<Offer[]>(coupons);
   const { activePageNumber, setActivePageNumber, setAllStoreCoupons } =
     useModal();
-  // console.log('Hello checking in server')
+  console.log('Hello checking in server')
+  console.log('Hello checking in server 2',coupons)
   const emailAlertCardIndex = 1; // Index after which the EmailAlertCard should appear (0-based index)
   // let nextPage =  1;
   const handleClick = async () => {
