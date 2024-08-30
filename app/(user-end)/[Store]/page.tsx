@@ -35,11 +35,12 @@
   const Page = async ({ params }: { params: { Store: string } }) => { 
     // console.log('Checking params', params.Store)
     const storeData: StoreType | null = await getStore(params.Store);
+    console.log('stores pages: ',storeData)
 
     let activeCouponsData = await getActiveCoupons(params.Store,'active',1,2);  // Active coupons
-    
+    console.log('stores pages: ',activeCouponsData)
     const expiredCouponsData = await getExpiredCoupons(params.Store,'expired',1,2); // expired coupons
-
+  console.log('stores pages: ',expiredCouponsData)
     // const theStore = AllStores[0];
     // console.log('first store', AllStores);
 
