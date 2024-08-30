@@ -13,7 +13,7 @@ export const getStore = async (storeName : string): Promise<StoreType | null> =>
     const jsonData = await response.json();
     // console.log('response', JSON.stringify(data.store : StoreType));
     // console.log('response',jsonData);
-    // console.log('response 2',jsonData.data.store);
+     console.log('response 2 store: ',jsonData.data.store);
     return jsonData.data.store;
   } catch (error) {
     console.error('Error fetching store:', error);
