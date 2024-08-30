@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif; 
+
+}
+html{
+  text-decoration: none;
+}
+
+.heading-1 {
+  @apply text-xl font-bold mb-2
+}
+
+.btn-black {
+  @apply py-2 px-4 bg-black hover:outline-black hover:shadow-lg outline-none rounded-lg text-white
+}
+.btn-white {
+  @apply py-2 px-4 bg-white hover:outline-black hover:shadow-lg outline-none rounded-lg text-black
+}
+.btn-primary {
+  @apply py-2 px-4 bg-blue-500 hover:outline-black hover:shadow-lg outline-none rounded-lg text-white
+}
+.btn-red {
+  @apply py-2 px-4 bg-red-500 hover:outline-black hover:shadow-lg outline-none rounded-lg text-white
+}
+.btn-green {
+  @apply py-2 px-4 bg-green-500 hover:outline-black hover:shadow-lg outline-none rounded-lg text-white
+}
+.btn-yellow {
+  @apply py-2 px-4 bg-yellow-500 hover:outline-black hover:shadow-lg outline-none rounded-lg text-white
+}
+.btn-full-width {
+  @apply w-full py-2 px-4 bg-blue-500 hover:outline-black hover:shadow-lg outline-none rounded-lg text-white
+}
+
+.basic-dropdown {
+  @apply bg-gray-100 shadow-sm px-4 py-2 outline-none rounded-md hover:shadow-lg
+}
+
+.cron-modal {
+  animation: fade-down 1s ease-out;
+}
+/* Add this in your global CSS or a specific CSS file */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes modalFadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+.modal-enter {
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+.modal-exit {
+  animation: modalFadeOut 0.3s ease-in;
+}
+
+.table-responsive {
+  @apply max-w-min md:min-w-full
+}
